@@ -93,28 +93,29 @@ avoid a compilation error of the ESP32 library.<br>So remove the // before
 /* Dont use WIFI functions */
  #define POCUTER_DISABLE_WIFI</pre>
 <p>&nbsp;</p>
-<pre>Successfully created esp32c3 image. "C:\\Users\\ednie\\AppData\\Local\\Arduino15\\packages\\esp32\\hardware\\esp32\\2.0.5/tools/gen_esp32part.exe" -q "C:\\Users\\ednie\\AppData\\Local\\Temp\\arduino_build_630234/partitions.csv" "C:\\Users\\ednie\\AppData\\Local\\Temp\\arduino_build_630234/PocuterWordClockV024.ino.partitions.bin" Multiple libraries were found for "Pocuter.h" 
-Used: C:\Users\ednie\Documents\Files\Arduino\libraries\Pocuter 
-Not used: C:\Program Files (x86)\Arduino\libraries\Pocuter 
-Multiple libraries were found for "WiFi.h" 
-Used: C:\Users\ednie\AppData\Local\Arduino15\packages\esp32\hardware\esp32\2.0.5\libraries\WiFi 
-Not used: C:\Program Files (x86)\Arduino\libraries\WiFi 
-Not used: C:\Users\ednie\Documents\Files\Arduino\libraries\WiFiNINA 
-Using library Pocuter in folder: C:\Users\ednie\Documents\Files\Arduino\libraries\Pocuter (legacy) 
+<pre>Successfully created esp32c3 image.
+"C:\\Users\\ednie\\AppData\\Local\\Arduino15\\packages\\esp32\\hardware\\esp32\\2.0.5/tools/gen_esp32part.exe" -q "C:\\Users\\ednie\\AppData\\Local\\Temp\\arduino_build_470814/partitions.csv" "C:\\Users\\ednie\\AppData\\Local\\Temp\\arduino_build_470814/PocuterWordClockV034.ino.partitions.bin"
+Multiple libraries were found for "Pocuter.h"
+ Used: C:\Users\ednie\Documents\Files\Arduino\libraries\Pocuter
+ Not used: C:\Program Files (x86)\Arduino\libraries\Pocuter
+Multiple libraries were found for "WiFi.h"
+ Used: C:\Users\ednie\AppData\Local\Arduino15\packages\esp32\hardware\esp32\2.0.5\libraries\WiFi
+ Not used: C:\Users\ednie\Documents\Files\Arduino\libraries\WiFiNINA
+ Not used: C:\Program Files (x86)\Arduino\libraries\WiFi
+Using library Pocuter in folder: C:\Users\ednie\Documents\Files\Arduino\libraries\Pocuter (legacy)
 Using library NimBLE-Arduino at version 1.4.0 in folder: C:\Users\ednie\Documents\Files\Arduino\libraries\NimBLE-Arduino 
-Using library Time at version 1.6.1 in folder: C:\Users\ednie\Documents\Files\Arduino\libraries\Time 
-Using library RTClib at version 2.1.1 in folder: C:\Users\ednie\Documents\Files\Arduino\libraries\RTClib 
-Using library Adafruit_BusIO at version 1.13.2 in folder: C:\Users\ednie\Documents\Files\Arduino\libraries\Adafruit_BusIO 
-Using library Wire at version 2.0.0 in folder: C:\Users\ednie\AppData\Local\Arduino15\packages\esp32\hardware\esp32\2.0.5\libraries\Wire 
 Using library EEPROM at version 2.0.0 in folder: C:\Users\ednie\AppData\Local\Arduino15\packages\esp32\hardware\esp32\2.0.5\libraries\EEPROM 
-Using library ESPNTP in folder: C:\Users\ednie\Documents\Files\Arduino\libraries\ESPNTP (legacy) 
+Using library ESPNTP in folder: C:\Users\ednie\Documents\Files\Arduino\libraries\ESPNTP (legacy)
 Using library WiFi at version 2.0.0 in folder: C:\Users\ednie\AppData\Local\Arduino15\packages\esp32\hardware\esp32\2.0.5\libraries\WiFi 
 Using library Ticker at version 2.0.0 in folder: C:\Users\ednie\AppData\Local\Arduino15\packages\esp32\hardware\esp32\2.0.5\libraries\Ticker 
 Using library AsyncTCP-master at version 1.1.1 in folder: C:\Users\ednie\Documents\Files\Arduino\libraries\AsyncTCP-master 
 Using library ESPAsyncWebServer-master at version 1.2.3 in folder: C:\Users\ednie\Documents\Files\Arduino\libraries\ESPAsyncWebServer-master 
 Using library FS at version 2.0.0 in folder: C:\Users\ednie\AppData\Local\Arduino15\packages\esp32\hardware\esp32\2.0.5\libraries\FS 
-Using library SPI at version 2.0.0 in folder: C:\Users\ednie\AppData\Local\Arduino15\packages\esp32\hardware\esp32\2.0.5\libraries\SPI "C:\\Users\\ednie\\AppData\\Local\\Arduino15\\packages\\esp32\\tools\\riscv32-esp-elf-gcc\\gcc8_4_0-esp-2021r2-patch3/bin/riscv32-esp-elf-size" -A "C:\\Users\\ednie\\AppData\\Local\\Temp<a href="file://arduino_build_630234/PocuterWordClockV024.ino.elf">\\arduino_build_630234/PocuterWordClockV024.ino.elf</a>" 
-Sketch uses 1225960 bytes (93%) of program storage space. Maximum is 1310720 bytes. Global variables use 44228 bytes (13%) of dynamic memory, leaving 283452 bytes for local variables. Maximum is 327680 byte </pre>
+"C:\\Users\\ednie\\AppData\\Local\\Arduino15\\packages\\esp32\\tools\\riscv32-esp-elf-gcc\\gcc8_4_0-esp-2021r2-patch3/bin/riscv32-esp-elf-size" -A "C:\\Users\\ednie\\AppData\\Local\\Temp\\arduino_build_470814/PocuterWordClockV034.ino.elf"
+Sketch uses 1219946 bytes (38%) of program storage space. Maximum is 3145728 bytes.
+Global variables use 43900 bytes (13%) of dynamic memory, leaving 283780 bytes for local variables. Maximum is 327680 bytes.
+
+</pre>
 <p>&nbsp;</p>
 <p>Some lessons learned:</p>
 <p>Use&nbsp;&nbsp; pocuter-&gt;begin(PocuterDisplay::BUFFER_MODE_DOUBLE_BUFFER);
