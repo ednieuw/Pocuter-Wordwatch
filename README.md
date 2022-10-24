@@ -1,6 +1,13 @@
 # Pocuter-Wordwatch
 Wordwatch on Pocuter (ESP32-C3) with UART BLE connection 
 <p>ESP32-C3 Pocuter Word clock</p>
+
+Not working yet V034:
+EEPROM storage
+Setting and remembering SSID and password changed with menu
+
+
+
 <p>A small watch that displays the time in words in Dutch, English, French and 
 German or digital on a tiny display.<br>The watch is able to receive the time 
 via NTP from the internet. Settings can be controled via a webpage on a mobile 
