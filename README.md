@@ -5,7 +5,8 @@
 German or digital on a tiny display.<br>The watch is able to receive the time 
 via NTP from the internet. <br />
 Settings can be controlled via a webpage, PC and Bluetooth LE.<br>If the watch is used stand-alone, without 
-connections, it can be controlled with buttons.<br><br><br></p>
+connections, it can be controlled with buttons.<br><br>
+
 <p><img alt="Pocuters" src="Pics/img9.jpg" width="890"></p>
 <p>The watch is built on a Pocuter One equipped with&nbsp; a ESP32-C3 chip and 
 SSD1131 OLED display built by <a href="https://www.pocuter.com/pocuter-one">
@@ -15,7 +16,7 @@ The software is written in the Arduino IDE 1.8.19 and IDE 2.0.0.<br />
 The software contains coding to use the:<br />
 1 Pocuter One with 96x64 pixels OLED colour display<br />
 2 BLE nRF UART connection <br />
-3 Get timezone corrected time with daylight savings from a NTP server via WIFI<br />
+3 Get time zone corrected time with daylight savings from a NTP server via WIFI<br />
 4 RGB LED<br />
 5 RTC for time<br />
 6 Storage of the settings on SD-card.<br />
@@ -23,8 +24,9 @@ The software contains coding to use the:<br />
 8 Menu driven control of preferences with serial monitor, BLE and WIFI-html page<br />
 9 Buttons<br />
 10 Four languages to display time<br />
-<br />
-Het was tien over tien 10:13:00<br />
+<table>
+	<tr>
+		<td>Het was tien over tien 10:13:00<br />
 Il est dix heures et quart 10:14:00<br />
 Il est dix heures et quart 10:15:00<br />
 Het is kwart over tien 10:16:00<br />
@@ -38,7 +40,16 @@ It was twenty past ten 10:23:00<br />
 Het is vijf voor half elf 10:24:00<br />
 Es ist funf vor halb elf 10:25:00<br />
 It is twenty five past ten 10:26:00<br />
-Es war funf vor halb elf 10:27:00<br />
+Es war funf vor halb elf 10:27:00</td>
+		<td><img alt="MS phone and iPhone8" src="Pics/MS_IP8.jpg" width="450" /></td>
+	</tr>
+	<tr>
+		<td>&nbsp;</td>
+		<td>HTML page in iPhone 8 and Microsoft Phone</td>
+	</tr>
+</table>
+<br />
+<br />
 <br />
 <br />
 <strong>First Use<br />
@@ -62,9 +73,22 @@ There are a few methods:<br />
 use the Arduino IDE or <a href="https://www.compuphase.com/software_termite.htm">
 Termite</a> as serial terminal.<br />
 <br />
-If you press I for information you get a menu. </p>
-<p><img alt="Termite terminal" src="Pics/Termite.jpg" width="350" /><br />
-Termite Terminal from a PC<br /><br />
+Sending the I for information will display the menu followed with the actual 
+settings of several preferences</p>
+<p>
+<table style="width: 51%">
+	<tr>
+		<td style="width: 330px">
+		<img alt="Menu on iPhone" src="Pics/phonemenu.jpg" width="350" /></td>
+		<td><img alt="Termite terminal" src="Pics/Termite.jpg" width="400" /></td>
+	</tr>
+	<tr>
+		<td style="width: 330px">HTML page on iPhone </td>
+		<td><br />
+Termite Terminal from a PC</td>
+	</tr>
+</table>
+<br />
 </p>
 <table style="width: 900px">
 	<tr>
@@ -88,9 +112,9 @@ connection list.&nbsp; <br />If the length of the SSID and/or password is less t
 will be turned off automatically. <br />This will speed up startup time no internet connection is available<br />Use a length of minimal 8 characters for SSID and password.<br />Check in the menu (third row from the bottom) if WIFI and NTP are on.<br />
 </span><br />Enter @ to reset the Pocuter. It will restart and connections will be made.<br />
 <br />
-To set a timezone. Send the the timezone string between the quotes prefixed with 
+To set a time zone. Send the the time zone string between the quotes prefixed with 
 the character E.<br />
-See the timezones at the bottom of this page</p>
+See the time zones at the bottom of this page.</p>
 		</td>
 		<td>
 		<p>&nbsp;</p>
@@ -206,9 +230,9 @@ If you are not connected to WIFI you have to set the time and date by hand<br />
 one o'clock</p>
 <p><br />
 <strong>E Set Timezone E&lt;-02&gt;2 or E&lt;+01&gt;-1</strong><br />
-Timezones and daylight savings should be ended and replaced by one universal 
+Time zones and daylight savings should be ended and replaced by one universal 
 date and time for the while planet cq universe<br />
-At the bottom of this page you can find the timezones used in 2022.<br />
+At the bottom of this page you can find the time zones used in 2022.<br />
 Let's pick one if you happen to live there. Antarctica/Troll,"&lt;+00&gt;0&lt;+02&gt;-2,M3.5.0/1,M10.5.0/3"<br />
 Copy the string between the " "'s and send it with starting with an E in front.<br />
 E&lt;+00&gt;0&lt;+02&gt;-2,M3.5.0/1,M10.5.0/3</p>
@@ -239,10 +263,11 @@ With N2208 the display will be off between 22:00 and 8:00<br />
 O toggle the display off and on</p>
 <p><br />
 <strong>Q Display colour choice (Q0-6)<br />
-Q0 Yellow Q1 hourly<br />
-Q2 White Q3 All Own<br />
-Q4 Own Q5 Wheel<br />
+Q0 Yellow Q1 hourly
+Q2 White Q3 All Own
+Q4 Own Q5 Wheel
 Q6 Digital display</strong><br />
+<br />
 Q0 will show the time with yellow words<br />
 Q1 will show every hour another colour<br />
 Q2 shows all the texts white<br />
@@ -251,8 +276,14 @@ Q5 will follow rainbow colours every minute<br />
 Q6 is the digital display with the IP-address and date until seconds are 00<br />
 You can also press the top right button</p>
 <p><br />
-<strong>R Reset settings @ = Reset Pocuter</strong><br />
+<strong>R Reset settings </strong><br />
 R will set all setting to default settings, Clear the SSID and password<br />
+</p>
+<p>
+<strong>@ = Restart Pocuter<br />
+</strong>@ will restart the Pocuter with is handy when the SSID, et cetera are 
+changes and the program must be restarted.</p>
+<p>
 <br />
 <strong>W=WIFI, X=NTP, Y=BLE, Z=Use SD</strong><br />
 Toggle WIFI, NTP on and off<br />
@@ -291,19 +322,18 @@ One change must be made in the file:
 "C:\Users\ednie\Documents\Files\Arduino\libraries\Pocuter\include\PocuterLibConfig.h"<br>
 Because we do not use the Pocuter WIFI library we have to disable the WIFI to 
 avoid a compilation error of the ESP32 WIFI library.<br>So remove the // before 
-#define POCUTER_DISABLE_WIFI to disable the Pocuter WIFI lbrary</p>
-<pre>
-/* Donuseuse WIFI functions */
+#define POCUTER_DISABLE_WIFI to disable the Pocuter WIFI lbrary.<pre>
+/* Dont use WIFI functions */
  #define POCUTER_DISABLE_WIFI</pre>
-When compiling the program these are the last lines for Version V043:<pre>Successfully created esp32c3 image.
-"C:\\Users\\ednie\\AppData\\Local\\Arduino15\\packages\\esp32\\hardware\\esp32\\2.0.5/tools/gen_esp32part.exe" -q "C:\\Users\\ednie\\AppData\\Local\\Temp\\arduino_build_331013/partitions.csv" "C:\\Users\\ednie\\AppData\\Local\\Temp\\arduino_build_331013/PocuterWordClockV043.ino.partitions.bin"
-Multiple libraries were found for "Pocuter.h"
-Used: C:\Users\ednie\Documents\Files\Arduino\libraries\Pocuter
-Not used: C:\Program Files (x86)\Arduino\libraries\Pocuter
+When compiling the program these are the last lines for Version V052:<pre>Successfully created esp32c3 image.
+"C:\\Users\\ednie\\AppData\\Local\\Arduino15\\packages\\esp32\\hardware\\esp32\\2.0.5/tools/gen_esp32part.exe" -q "C:\\Users\\ednie\\AppData\\Local\\Temp\\arduino_build_992263/partitions.csv" "C:\\Users\\ednie\\AppData\\Local\\Temp\\arduino_build_992263/PocuterWordClockV052.ino.partitions.bin"
 Multiple libraries were found for "WiFi.h"
 Used: C:\Users\ednie\AppData\Local\Arduino15\packages\esp32\hardware\esp32\2.0.5\libraries\WiFi
 Not used: C:\Users\ednie\Documents\Files\Arduino\libraries\WiFiNINA
 Not used: C:\Program Files (x86)\Arduino\libraries\WiFi
+Multiple libraries were found for "Pocuter.h"
+Used: C:\Users\ednie\Documents\Files\Arduino\libraries\Pocuter
+Not used: C:\Program Files (x86)\Arduino\libraries\Pocuter
 Using library Pocuter in folder: C:\Users\ednie\Documents\Files\Arduino\libraries\Pocuter (legacy)
 Using library NimBLE-Arduino at version 1.4.1 in folder: C:\Users\ednie\Documents\Files\Arduino\libraries\NimBLE-Arduino 
 Using library ESPNTP in folder: C:\Users\ednie\Documents\Files\Arduino\libraries\ESPNTP (legacy)
@@ -312,9 +342,10 @@ Using library Ticker at version 2.0.0 in folder: C:\Users\ednie\AppData\Local\Ar
 Using library AsyncTCP-master at version 1.1.1 in folder: C:\Users\ednie\Documents\Files\Arduino\libraries\AsyncTCP-master 
 Using library ESPAsyncWebServer-master at version 1.2.3 in folder: C:\Users\ednie\Documents\Files\Arduino\libraries\ESPAsyncWebServer-master 
 Using library FS at version 2.0.0 in folder: C:\Users\ednie\AppData\Local\Arduino15\packages\esp32\hardware\esp32\2.0.5\libraries\FS 
-"C:\\Users\\ednie\\AppData\\Local\\Arduino15\\packages\\esp32\\tools\\riscv32-esp-elf-gcc\\gcc8_4_0-esp-2021r2-patch3/bin/riscv32-esp-elf-size" -A "C:\\Users\\ednie\\AppData\\Local\\Temp\\arduino_build_331013/PocuterWordClockV043.ino.elf"
-Sketch uses 1258336 bytes (40%) of program storage space. Maximum is 3145728 bytes.
-Global variables use 43908 bytes (13%) of dynamic memory, leaving 283772 bytes for local variables. Maximum is 327680 bytes.
+Using library Preferences at version 2.0.0 in folder: C:\Users\ednie\AppData\Local\Arduino15\packages\esp32\hardware\esp32\2.0.5\libraries\Preferences 
+"C:\\Users\\ednie\\AppData\\Local\\Arduino15\\packages\\esp32\\tools\\riscv32-esp-elf-gcc\\gcc8_4_0-esp-2021r2-patch3/bin/riscv32-esp-elf-size" -A "C:\\Users\\ednie\\AppData\\Local\\Temp\\arduino_build_992263/PocuterWordClockV052.ino.elf"
+Sketch uses 1265096 bytes (40%) of program storage space. Maximum is 3145728 bytes.
+Global variables use 44044 bytes (13%) of dynamic memory, leaving 283636 bytes for local variables. Maximum is 327680 bytes. 
 </pre>
 <p>&nbsp;</p>
 <p><strong>Some lessons learned:</strong></p>
@@ -795,4 +826,3 @@ Etc/UTC,"UTC0"
 Etc/Greenwich,"GMT0"
 Etc/Universal,"UTC0"
 Etc/Zulu,"UTC0"</pre>
-
