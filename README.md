@@ -6,7 +6,8 @@ German or digital on a tiny display.<br>The watch is able to receive the time
 via NTP from the internet. <br />
 Settings can be controlled via a webpage, PC and Bluetooth LE.<br>If the watch is used stand-alone, without 
 connections, it can be controlled with buttons.<br><br>
-
+<a href="https://github.com/ednieuw/Pocuter-Wordwatch">Latest versions and 
+updates on Github</a> <br></p>
 <p><img alt="Pocuters" src="Pics/img9.jpg" width="890"></p>
 <p>The watch is built on a Pocuter One equipped with&nbsp; a ESP32-C3 chip and 
 SSD1131 OLED display built by <a href="https://www.pocuter.com/pocuter-one">
@@ -15,7 +16,7 @@ The software is written in the Arduino IDE 1.8.19 and IDE 2.0.0.<br />
 <br />
 The software contains coding to use the:<br />
 1 Pocuter One with 96x64 pixels OLED colour display<br />
-2 BLE nRF UART connection <br />
+2 BLE nRF UART connection with option to send strings longer than 20 bytes<br />
 3 Get time zone corrected time with daylight savings from a NTP server via WIFI<br />
 4 RGB LED<br />
 5 RTC for time<br />
@@ -26,39 +27,57 @@ The software contains coding to use the:<br />
 10 Four languages to display time<br />
 <table>
 	<tr>
-		<td>Het was tien over tien 10:13:00<br />
-Il est dix heures et quart 10:14:00<br />
-Il est dix heures et quart 10:15:00<br />
-Het is kwart over tien 10:16:00<br />
-Es war viertel nach zehn 10:17:00<br />
-It was quarter past ten 10:18:00<br />
-Il est dix heures vingt 10:19:00<br />
-Es ist zehn vor halb elf 10:20:00<br />
-Het is tien voor half elf 10:21:00<br />
-It was twenty past ten 10:22:00<br />
-It was twenty past ten 10:23:00<br />
-Het is vijf voor half elf 10:24:00<br />
-Es ist funf vor halb elf 10:25:00<br />
-It is twenty five past ten 10:26:00<br />
-Es war funf vor halb elf 10:27:00</td>
+		<td style="width: 300px"><pre>Het was tien over tien 10:13:00
+Il est dix heures et quart 10:14:00
+Il est dix heures et quart 10:15:00
+Het is kwart over tien 10:16:00
+Es war viertel nach zehn 10:17:00
+It was quarter past ten 10:18:00
+Il est dix heures vingt 10:19:00
+Es ist zehn vor halb elf 10:20:00
+Het is tien voor half elf 10:21:00
+It was twenty past ten 10:22:00
+It was twenty past ten 10:23:00
+Het is vijf voor half elf 10:24:00
+Es ist funf vor halb elf 10:25:00
+It is twenty five past ten 10:26:00
+Es war funf vor halb elf 10:27:00</pre></td>
 		<td><img alt="MS phone and iPhone8" src="Pics/MS_IP8.jpg" width="450" /></td>
 	</tr>
 	<tr>
-		<td>&nbsp;</td>
+		<td style="width: 300px">Display of the time in the serial output</td>
 		<td>HTML page in iPhone 8 and Microsoft Phone</td>
 	</tr>
 </table>
 <br />
-<br />
-<br />
-<br />
 <strong>First Use<br />
-</strong>There are two versions of this application.<br />
+</strong>When the Pocuter is running the LED will pulse red every second. 
+If connected to WIFI the led will also pulse green.<br />
+Press the
+the top right button to see the ip-address of the clock, the time and date.
+<br />
+Time and ip-address will disappear when second is 00.<br />
+Enter the ip-address in the browser to see the menu in the browser or connect 
+via Bluetooth with you mobile for the menu<br />
+<br />
+<img alt="IP-address" src="Pics/img9.gif" /><br />
+</p>
+<p><strong>Installations</strong>&nbsp;
+<br />
+There are two versions of this application. <br />
 One with storage of the preferences on a SD-card and then a fast screen display 
 is possible.<br />
 or<br />
 One version that stores the settings in its own memory but due to a bug the fast 
 screen display has to be disabled. <br />
+Locate this line in the top of the program and remove the // for fast screen 
+access and the use of an SD card.<br />
+Compile and upload it into the pocuter<br />
+<br />
+//#define FASTSCREEN&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; 
+// Use SD for storage instead of SPIFFS. With SPIFFS and no SD storage No fast 
+screen. pocuter-&gt;begin(PocuterDisplay::BUFFER_MODE_DOUBLE_BUFFER); </p>
+<p>
 <br />
 When a SD card is used:<br />
 Insert a FAT formatted SD-card. Settings will be saved on it.<br />
@@ -98,7 +117,7 @@ to control it with your mobile phone or tablet<br />
 Use my IOS app:&nbsp;
 <a href="https://apps.apple.com/nl/app/ble-serial-pro/id1632245655?l=en">BLE 
 Serial Pro</a>. . Turn on Fast BLE with option Z<br />
-A free version is planned for winter 2022-2023.<br />
+		<br />
 For Android use:
 <a href="https://play.google.com/store/apps/details?id=de.kai_morich.serial_bluetooth_terminal">
 Serial Bluetooth terminal</a>. Turn off (default) Fast BLE.<br><br />In both cases 
@@ -106,15 +125,18 @@ Serial Bluetooth terminal</a>. Turn off (default) Fast BLE.<br><br />In both cas
 of Information and the menu shows up</strong>.<br />Enter the first letter of the setting you want to changes followed with a code.<br />Some entries just toggle On and Off. Like the W to set WIFI Off or On. 
 </p>
 <p style="width: 600px">To change the SSID and password:<br /><strong>A</strong><span class="auto-style1"><strong>my-ssid</strong></span> 
-and send this command. Eg AFRITZ!Box01<br />Then&nbsp; <strong>B</strong><span class="auto-style1"><strong>my password</strong> and send that password.<br />
-<strong>CBLEname</strong>&nbsp; will change to name displayed in the Bluetooth 
+and send this command. Eg AFRITZ!Box01 or aFRITZ!Box01. Starting with an upper 
+or lower case character is an identical instruction in the command string<br />Then&nbsp; <strong>B</strong><span class="auto-style1"><strong>my password</strong> and send that password.<br />
+<strong>Cbroadcastname</strong>&nbsp; will change to name displayed in the Bluetooth 
 connection list.&nbsp; <br />If the length of the SSID and/or password is less then 5 characters the WIFI 
-will be turned off automatically. <br />This will speed up startup time no internet connection is available<br />Use a length of minimal 8 characters for SSID and password.<br />Check in the menu (third row from the bottom) if WIFI and NTP are on.<br />
+will be turned off automatically. <br />This will speed up startup time if no internet connection is available<br />Use a length of minimal 8 characters for SSID and password.<br />Check in the menu (third row from the bottom) if WIFI and NTP are on.<br />
+If WIFI is connected the LED on the pocuter will pulse green.<br />
 </span><br />Enter @ to reset the Pocuter. It will restart and connections will be made.<br />
 <br />
 To set a time zone. Send the the time zone string between the quotes prefixed with 
-the character E.<br />
-See the time zones at the bottom of this page.</p>
+the character E or e.<br />
+See the time zones at the bottom of this page.<br />
+For example; if you live in Australia/Sydney send the string, eAEST-10AEDT,M10.1.0,M4.1.0/3</p>
 		</td>
 		<td>
 		<p>&nbsp;</p>
@@ -152,7 +174,7 @@ ___________________________________</pre>
 	</tr>
 	<tr>
 		<td style="width: 550px">&nbsp;</td>
-		<td>Menu shown in </td>
+		<td>Menu shown in serial output.</td>
 	</tr>
 </table>
 <p><br>
@@ -192,9 +214,9 @@ to white enter: Q2<br>To shown random all four languages every minute send L4.<b
 <br />
 Set the time by entering T130245. (130245 will also work)<br />
 <br />
-Turn off WIFI by sending a W</p>
-<p>Reset the Pocuter with the letter @</p>
-<p>Reset to default setting by send R<br />
+Turn off WIFI by sending a W.</p>
+<p>Reset the Pocuter with the letter @.</p>
+<p>Reset to default setting by send R.<br />
 <br>In the BLE connection the SSID and password will be shown. <br />
 <br>
 <br>
@@ -225,19 +247,20 @@ Entering b will show the used password.<br />
 <br />
 <strong>D Set Date</strong>&nbsp; and <strong>T Set Time</strong> <br />
 If you are not connected to WIFI you have to set the time and date by hand<br />
-(D06112022) to set the date to 6 November 2022</p>
+(D06112022) to set the date to 6 November 2022.</p>
 <p>T132145 (or 132145)&nbsp; to set the time to 45 seconds and 21 minute past 
-one o'clock</p>
+one o'clock.</p>
 <p><br />
 <strong>E Set Timezone E&lt;-02&gt;2 or E&lt;+01&gt;-1</strong><br />
 Time zones and daylight savings should be ended and replaced by one universal 
-date and time for the while planet cq universe<br />
+date and time for the while planet cq universe. <br />
+But that is my opinion.<br />
+<br />
 At the bottom of this page you can find the time zones used in 2022.<br />
 Let's pick one if you happen to live there. Antarctica/Troll,"&lt;+00&gt;0&lt;+02&gt;-2,M3.5.0/1,M10.5.0/3"<br />
 Copy the string between the " "'s and send it with starting with an E in front.<br />
 E&lt;+00&gt;0&lt;+02&gt;-2,M3.5.0/1,M10.5.0/3</p>
-<p><br />
-&nbsp;<br />
+<p>&nbsp;<br />
 <strong>Make own colour of: (Hex RRGGBB)<br />
 F Font G Dimmed font H Bkgnd</strong><br />
 You can set the colours of the characters and the colour of the back ground<br />
@@ -826,3 +849,4 @@ Etc/UTC,"UTC0"
 Etc/Greenwich,"GMT0"
 Etc/Universal,"UTC0"
 Etc/Zulu,"UTC0"</pre>
+
