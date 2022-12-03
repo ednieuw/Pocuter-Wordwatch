@@ -6,8 +6,6 @@ German or digital on a tiny display.<br>The watch is able to receive time
 via NTP from the internet. <br />
 Settings can be controlled via a webpage, PC and Bluetooth LE.<br>If the watch is used stand-alone, without 
 connections, it can be controlled with buttons.<br><br>
-<a href="https://github.com/ednieuw/Pocuter-Wordwatch">Latest versions and 
-updates on Github</a> <br></p>
 <p><img alt="Pocuters" src="Pics/img9.jpg" width="890"></p>
 <p>The watch is built in a Pocuter One equipped with&nbsp; a ESP32-C3 chip and 
 SSD1131 OLED display built by <a href="https://www.pocuter.com/pocuter-one">
