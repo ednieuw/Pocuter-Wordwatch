@@ -1,4 +1,3 @@
-# Pocuter-Wordwatch
 <h1>ESP32-C3 Pocuter word watch</h1>
 
 <p>A small watch that displays the time in words in Dutch, English, French and 
@@ -420,6 +419,7 @@ It is a little fiddling with the small buttons but it worked for me always to
 upload again after dozens of crashes due to bugs and programming errors</p>
 <p>&nbsp;</p>
 <p>Ed Nieuwenhuys, November 2022&nbsp;</p>
+https://ednieuw.home.xs4all.nl/Woordklok/index.html
 <p>&nbsp;</p>
 <p><strong>Timezones</strong>. <br />
 Copy the text between the quotes and paste them after the character E </p>
