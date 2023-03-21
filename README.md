@@ -303,6 +303,9 @@ With N2208 the display will be turned off between 22:00 and 8:00.<br />
 <strong>O Display toggle On/Off</strong><br />
 O toggle the display off and on.</p>
 <p><br />
+<strong>P System LED toggle On/Off</strong><br />
+P Turn the RGB LED on the display off or on.</p>
+<p><br />
 <strong>Q Display colour choice (Q0-6)<br />
 Q0 Yellow Q1 hourly
 Q2 White Q3 All Own
