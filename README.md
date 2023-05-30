@@ -22,6 +22,11 @@ The software contains coding to use the:<br />
 8 Menu driven control of preferences with serial monitor, BLE and WIFI-html page<br />
 9 Buttons<br />
 10 Four languages to display time<br />
+11 After V057 An analog clock display is added.<br />
+<br />NB For Fast screen access an SD card must be inserted in the Pocuter.<br />
+Therefore two versions are available.<br />
+PocuterWordClockV0??FS.INO with fast screen; SD needed.<br />
+PocuterWordClockV0??.INO with a slower screen but with no SD needed.<br />
 <table>
 	<tr>
 		<td style="width: 248px"><span class="auto-style3">Het was tien over tien 10:13:00</span><br class="auto-style3" />
